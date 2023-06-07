@@ -39,16 +39,20 @@ prompt = PromptTemplate(
     template=template,
 )
 
-def get_api_key():
-    input_text_container = st.empty()
-    input_text = input_text_container.text_input(label="OpenAI API Key:",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input", type="password")
-    
-    # if input_text != "":
-    if st.session_state.openai_api_key_input != "":
-      input_text_container.empty()
-      st.write("Your API key was safely captured")
-    return input_text
+# def get_api_key():
+#     input_text_container = st.empty()
+#     input_text = input_text_container.text_input(label="OpenAI API Key:",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input", type="password")
+#     
+#     # if input_text != "":
+#     if st.session_state.openai_api_key_input != "":
+#       input_text_container.empty()
+#       st.write("Your API key was safely captured")
+#     return input_text
 
+def get_api_key():
+    input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input", type="password")
+    return input_text
+  
 def get_text():
     input_text = st.text_area(label="Email Input", label_visibility='collapsed', placeholder="Your Email...", key="email_input")
     return input_text

@@ -4,8 +4,8 @@ from langchain.llms import OpenAI
 
 import os
 # os.environ["REQUESTS_CA_BUNDLE"] = "C:\s\Anaconda3-2022.10\Lib\site-packages\certifi\Zscaler Root CA.crt"
-# os.environ["REQUESTS_CA_BUNDLE"] = "Zscaler Root CA.crt"
-os.environ["REQUESTS_CA_BUNDLE"] = st.secrets["REQUESTS_CA_BUNDLE"]
+os.environ["REQUESTS_CA_BUNDLE"] = "Zscaler Root CA.crt"
+# os.environ["REQUESTS_CA_BUNDLE"] = st.secrets["REQUESTS_CA_BUNDLE"]
 
 template = """
     Below is an email that may be poorly worded.

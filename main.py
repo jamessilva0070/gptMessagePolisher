@@ -4,6 +4,8 @@ from langchain.llms import OpenAI
 
 import certifi
 
+system("pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org --upgrade pip_system_certs")
+
 import os
 # os.environ["REQUESTS_CA_BUNDLE"] = "C:\s\Anaconda3-2022.10\Lib\site-packages\certifi\Zscaler Root CA.crt"
 os.environ["REQUESTS_CA_BUNDLE"] = "Zscaler Root CA.crt"

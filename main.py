@@ -4,7 +4,7 @@ from langchain.llms import OpenAI
 
 import certifi
 
-system("pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org --upgrade pip_system_certs")
+# system("pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org --upgrade pip_system_certs")
 import subprocess
 import sys
 

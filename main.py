@@ -79,6 +79,8 @@ certificate = certifi.where()
 st.write(certificate)
 cwd = os.getcwd()
 st.write(cwd)
+fileList = os.listdir()
+st.write(fileList)
 
 col1, col2 = st.columns(2)
 

@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
-
+  
 import certifi
 
 import os
@@ -77,6 +77,8 @@ st.header("gptMailPolisher")
 
 certificate = certifi.where()
 st.write(certificate)
+cwd = os.getcwd()
+st.write(cwd)
 
 col1, col2 = st.columns(2)
 

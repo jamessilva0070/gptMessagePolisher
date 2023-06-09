@@ -2,7 +2,7 @@ import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
   
-import certifi
+# import certifi
 
 import os
 # os.environ["REQUESTS_CA_BUNDLE"] = "C:\s\Anaconda3-2022.10\Lib\site-packages\certifi\Zscaler Root CA.crt"

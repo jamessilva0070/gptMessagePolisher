@@ -76,13 +76,13 @@ def load_LLM(openai_api_key):
 st.set_page_config(page_title="gptMailPolisher", page_icon=":robot:")
 st.header("gptMailPolisher")
 
-certificate = certifi.where()
-st.write(certificate)
-cwd = os.getcwd()
-st.write(cwd)
-st.write("Files")
-fileList = os.listdir()
-st.write(fileList)
+# certificate = certifi.where()
+# st.write(certificate)
+# cwd = os.getcwd()
+# st.write(cwd)
+# st.write("Files")
+# fileList = os.listdir()
+# st.write(fileList)
 
 col1, col2 = st.columns(2)
 

@@ -42,6 +42,18 @@ def load_LLM(openai_api_key):
     llm = OpenAI(temperature=.7, openai_api_key=openai_api_key)
     return llm
 
+def get_api_key():
+    input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input", type="password")
+    return input_text
+
+def get_text():
+      input_text = st.text_area(label="Email Input", label_visibility='collapsed', placeholder="Your Email...", key="email_input")
+      return input_text
+  
+def update_text_with_example():
+      print ("in updated")
+      st.session_state.email_input = "Sally I am starts work at yours monday from dave"
+  
 st.set_page_config(page_title="Globalize Email", page_icon=":robot:")
 st.header("Globalize Text")
 
@@ -58,10 +70,6 @@ with col2:
 
 st.markdown("## Enter Your Email To Convert")
 
-def get_api_key():
-    input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input", type="password")
-    return input_text
-
 openai_api_key = get_api_key()
 
 if openai_api_key !="":
@@ -76,19 +84,11 @@ if openai_api_key !="":
           'Which English Dialect would you like?',
           ('American', 'British'))
   
-  def get_text():
-      input_text = st.text_area(label="Email Input", label_visibility='collapsed', placeholder="Your Email...", key="email_input")
-      return input_text
-  
   email_input = get_text()
   
   if len(email_input.split(" ")) > 700:
       st.write("Please enter a shorter email. The maximum length is 700 words.")
       st.stop()
-  
-  def update_text_with_example():
-      print ("in updated")
-      st.session_state.email_input = "Sally I am starts work at yours monday from dave"
   
   st.button("*See An Example*", type='secondary', help="Click to see an example of the email you will be converting.", on_click=update_text_with_example)
   

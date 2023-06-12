@@ -52,6 +52,12 @@ prompt = PromptTemplate(
 #       st.write("Your API key was safely captured")
 #     return input_text
 
+def load_LLM(openai_api_key):
+    """Logic for loading the chain you want to use should go here."""
+    # Make sure your openai_api_key is set as an environment variable
+    llm = OpenAI(temperature=.7, openai_api_key=openai_api_key)
+    return llm
+
 def get_api_key():
     input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input", type="password")
     return input_text
@@ -63,12 +69,6 @@ def get_text():
 def update_text_with_example():
     print ("in updated")
     st.session_state.email_input = "Sally I am starts work at yours monday from dave"
-
-def load_LLM(openai_api_key):
-    """Logic for loading the chain you want to use should go here."""
-    # Make sure your openai_api_key is set as an environment variable
-    llm = OpenAI(temperature=.7, openai_api_key=openai_api_key)
-    return llm
 
 st.set_page_config(page_title="gptMailPolisher", page_icon=":robot:")
 st.header("gptMailPolisher")

@@ -2,11 +2,12 @@ import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
   
-import certifi
+# import certifi
 
 import os
 # os.environ["REQUESTS_CA_BUNDLE"] = "C:\s\Anaconda3-2022.10\Lib\site-packages\certifi\Zscaler Root CA.crt"
-os.environ["REQUESTS_CA_BUNDLE"] = "/app/gptmessagepolisher/Zscaler Root CA.crt"
+os.environ["REQUESTS_CA_BUNDLE"] = "Zscaler Root CA.crt"
+# os.environ["REQUESTS_CA_BUNDLE"] = "/app/gptmessagepolisher/Zscaler Root CA.crt"
 # os.environ["REQUESTS_CA_BUNDLE"] = st.secrets["REQUESTS_CA_BUNDLE"]
 
 template = """
@@ -75,13 +76,13 @@ def load_LLM(openai_api_key):
 st.set_page_config(page_title="gptMailPolisher", page_icon=":robot:")
 st.header("gptMailPolisher")
 
-certificate = certifi.where()
-st.write(certificate)
-cwd = os.getcwd()
-st.write(cwd)
-st.write("Files")
-fileList = os.listdir()
-st.write(fileList)
+# certificate = certifi.where()
+# st.write(certificate)
+# cwd = os.getcwd()
+# st.write(cwd)
+# st.write("Files")
+# fileList = os.listdir()
+# st.write(fileList)
 
 col1, col2 = st.columns(2)
 

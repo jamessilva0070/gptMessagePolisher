@@ -2,11 +2,9 @@ import streamlit as st
 from langchain import PromptTemplate
 from langchain.llms import OpenAI
   
-# import certifi
-
-import os
+# import os
 # os.environ["REQUESTS_CA_BUNDLE"] = "C:\s\Anaconda3-2022.10\Lib\site-packages\certifi\Zscaler Root CA.crt"
-os.environ["REQUESTS_CA_BUNDLE"] = "Zscaler Root CA.crt"
+# os.environ["REQUESTS_CA_BUNDLE"] = "Zscaler Root CA.crt"
 # os.environ["REQUESTS_CA_BUNDLE"] = "/app/gptmessagepolisher/Zscaler Root CA.crt"
 # os.environ["REQUESTS_CA_BUNDLE"] = st.secrets["REQUESTS_CA_BUNDLE"]
 
@@ -56,7 +54,6 @@ prompt = PromptTemplate(
 
 def get_api_key():
     input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input", type="password")
-    # input_text = st.text_input(label="OpenAI API Key ",  placeholder="Ex: sk-2twmA8tfCb8un4...", key="openai_api_key_input")
     return input_text
   
 def get_text():

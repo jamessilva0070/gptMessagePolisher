@@ -64,7 +64,7 @@ def get_api_key():
 
 openai_api_key = get_api_key()
 
-if openai_api_key !=""
+if openai_api_key !="":
   col1, col2 = st.columns(2)
   with col1:
       option_tone = st.selectbox(
